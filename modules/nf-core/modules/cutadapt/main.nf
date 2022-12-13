@@ -2,7 +2,8 @@ process CUTADAPT {
     tag "$meta.id"
     label 'process_medium'
 
-    conda (params.enable_conda ? 'bioconda::cutadapt=3.4' : null)
+    conda (params.enable_conda ? '/root/miniconda/envs/cutadapt' : null)
+
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/cutadapt:3.4--py39h38f01e4_1' :
         'quay.io/biocontainers/cutadapt:3.4--py39h38f01e4_1' }"
