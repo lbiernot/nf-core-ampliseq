@@ -45,7 +45,7 @@ process DADA2_TAXONOMY {
     # find first occurrence of NA
     res <- max.col(is.na(tax), ties = "first")
     # correct if no NA is present in column to NA
-    if(any(res == 1)) is.na(res) <- (res == 1) & (length(tax) > 0) !is.na(tax[[1]])
+    if(any(res == 1)) is.na(res) <- (res == 1) & !is.na(tax[[1]])
     # find index of last entry before NA, which is the bootstrap value
     res <- res-1
     # if NA choose last entry
