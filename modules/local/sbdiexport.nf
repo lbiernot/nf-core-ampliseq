@@ -6,7 +6,7 @@ process SBDIEXPORT {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/r-tidyverse:1.2.1' :
-        'quay.io/biocontainers/r-tidyverse:1.2.1' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:r-tidyverse-1.2.1' }"
 
     input:
     path asvtable

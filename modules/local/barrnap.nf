@@ -6,7 +6,7 @@ process BARRNAP {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/barrnap:0.9--hdfd78af_4' :
-        'quay.io/biocontainers/barrnap:0.9--hdfd78af_4' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:barrnap-0.9--hdfd78af_4' }"
 
     input:
     path(fasta)

@@ -6,7 +6,7 @@ process RENAME_RAW_DATA_FILES {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/ubuntu:20.04' :
-        'ubuntu:20.04' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:ubuntu-20.04' }"
 
     input:
     tuple val(meta), path(reads)

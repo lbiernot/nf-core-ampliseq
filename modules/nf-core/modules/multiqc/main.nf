@@ -5,7 +5,7 @@ process MULTIQC {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/multiqc:1.13a--pyhdfd78af_1' :
-        'quay.io/biocontainers/multiqc:1.13a--pyhdfd78af_1' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:multiqc-1.13a--pyhdfd78af_1' }"
 
     input:
     path  multiqc_files, stageAs: "?/*"

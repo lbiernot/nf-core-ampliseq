@@ -6,7 +6,7 @@ process CUTADAPT_SUMMARY {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/python:3.8.3' :
-        'quay.io/biocontainers/python:3.8.3' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:python-3.8.3' }"
 
     input:
     val(name)

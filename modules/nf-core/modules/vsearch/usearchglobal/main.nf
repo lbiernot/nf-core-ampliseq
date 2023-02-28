@@ -6,7 +6,7 @@ process VSEARCH_USEARCHGLOBAL {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/vsearch:2.21.1--h95f258a_0':
-        'quay.io/biocontainers/vsearch:2.21.1--h95f258a_0' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:vsearch-2.21.1--h95f258a_0' }"
 
     input:
     tuple val(meta), path(queryfasta)

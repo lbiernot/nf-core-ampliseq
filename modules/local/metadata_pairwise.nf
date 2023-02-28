@@ -6,7 +6,7 @@ process METADATA_PAIRWISE {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/bioconductor-dada2:1.22.0--r41h399db7b_0' :
-        'quay.io/biocontainers/bioconductor-dada2:1.22.0--r41h399db7b_0' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:bioconductor-dada2-1.22.0--r41h399db7b_0' }"
 
     input:
     path(metadata)

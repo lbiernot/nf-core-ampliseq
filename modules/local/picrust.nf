@@ -6,7 +6,7 @@ process PICRUST {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/picrust2:2.5.0--pyhdfd78af_0' :
-        'quay.io/biocontainers/picrust2:2.5.0--pyhdfd78af_0' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:picrust2-2.5.0--pyhdfd78af_0' }"
 
     input:
     path(seq)

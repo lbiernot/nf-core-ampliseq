@@ -3,7 +3,7 @@ process QIIME2_DIVERSITY_ADONIS {
     label 'process_low'
 
     conda (params.enable_conda ? { exit 1 "QIIME2 has no conda package" } : null)
-    container "quay.io/qiime2/core:2021.8"
+    container "432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:qiime2-core-2021.8"
 
     input:
     tuple path(metadata), path(core)

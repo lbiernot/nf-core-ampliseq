@@ -5,7 +5,7 @@ process FORMAT_TAXRESULTS {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/pandas:1.1.5' :
-        'quay.io/biocontainers/pandas:1.1.5' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:pandas-1.1.5' }"
 
     input:
     path(taxtable)

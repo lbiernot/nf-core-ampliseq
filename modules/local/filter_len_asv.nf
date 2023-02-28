@@ -6,7 +6,7 @@ process FILTER_LEN_ASV {
 
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/bioconductor-biostrings:2.58.0--r40h037d062_0' :
-        'quay.io/biocontainers/bioconductor-biostrings:2.58.0--r40h037d062_0' }"
+        '432304291388.dkr.ecr.us-east-1.amazonaws.com/nextflow:bioconductor-biostrings-2.58.0--r40h037d062_0' }"
 
     input:
     path(fasta)
